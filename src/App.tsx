@@ -1,20 +1,27 @@
-import { Button } from "@/components/ui/button"
+import Projects from "@/layout/Projects.tsx"
+import Profile from "@/layout/profile.tsx"
 
-export function App() {
+import TechStacks from "@/layout/techStacks.tsx"
+import Navbar from "@/layout/navbar.tsx";
+import Educational from "@/layout/educations.tsx"
+import Contact from "@/layout/Contact.tsx"
+
+
+function App() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
+     <section className="flex  select-none  overflow-y-auto  place-items-center justify-center">
+       <div className="flex lg:flex-col gap-3 flex-col-reverse">
+         <Navbar/>
+         <div className={"lg:max-w-4xl flex flex-col pb-20 md:pb-0 lg:pb-0 gap-3 w-full "}>
+           <Profile/>
+           <Projects/>
+           <TechStacks/>
+           <Educational/>
+           <Contact/>
+         </div>
+       </div>
+
+     </section>
   )
 }
 
